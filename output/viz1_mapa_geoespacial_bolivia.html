@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4c35de82e01f04383528317406c563b2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4c35de82e01f04383528317406c563b2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4c35de82e01f04383528317406c563b2 = L.map(
+                "map_4c35de82e01f04383528317406c563b2",
+                {
+                    center: [-16.5, -64.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_aa79d3c63a809b907be19d09dced1c99 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_aa79d3c63a809b907be19d09dced1c99.addTo(map_4c35de82e01f04383528317406c563b2);
+        
+    
+            var feature_group_212a10159ca4cfa13b4c456ff8d16421 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_ae1ddee7ca9849753b611aecb3b60fa5 = L.circleMarker(
+                [-19.5836, -65.7531],
+                {"bubblingMouseEvents": true, "color": "#d95f02", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d95f02", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.082, "stroke": true, "weight": 3}
+            ).addTo(feature_group_212a10159ca4cfa13b4c456ff8d16421);
+        
+    
+        var popup_ae0f250cc40759e8126151c0174fa61f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c7f8245a2eea157986c784869333da34 = $(`<div id="html_c7f8245a2eea157986c784869333da34" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Potosí</h4>         <b>Población estimada:</b> 882<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 13.63%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 41.46%<br>         <b>Cifra negra (no denuncia):</b> 97.74%     </div>     </div>`)[0];
+                popup_ae0f250cc40759e8126151c0174fa61f.setContent(html_c7f8245a2eea157986c784869333da34);
+            
+        
+
+        circle_marker_ae1ddee7ca9849753b611aecb3b60fa5.bindPopup(popup_ae0f250cc40759e8126151c0174fa61f)
+        ;
+
+        
+    
+    
+            circle_marker_ae1ddee7ca9849753b611aecb3b60fa5.bindTooltip(
+                `<div>
+                     Potosí | Discriminación: 13.63%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_907e5d7f9eaae696c1e4a0d706062884 = L.circleMarker(
+                [-11.0267, -68.7692],
+                {"bubblingMouseEvents": true, "color": "#d95f02", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d95f02", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.633999999999997, "stroke": true, "weight": 3}
+            ).addTo(feature_group_212a10159ca4cfa13b4c456ff8d16421);
+        
+    
+        var popup_da68c6087f567ab8498ca5d464693b02 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e463a310d4993e20a7ce26dbf541004e = $(`<div id="html_e463a310d4993e20a7ce26dbf541004e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Pando</h4>         <b>Población estimada:</b> 133<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 18.31%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 45.68%<br>         <b>Cifra negra (no denuncia):</b> 91.42%     </div>     </div>`)[0];
+                popup_da68c6087f567ab8498ca5d464693b02.setContent(html_e463a310d4993e20a7ce26dbf541004e);
+            
+        
+
+        circle_marker_907e5d7f9eaae696c1e4a0d706062884.bindPopup(popup_da68c6087f567ab8498ca5d464693b02)
+        ;
+
+        
+    
+    
+            circle_marker_907e5d7f9eaae696c1e4a0d706062884.bindTooltip(
+                `<div>
+                     Pando | Discriminación: 18.31%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c85563b195f9e5a8978d8c1018c0d1b3 = L.circleMarker(
+                [-19.0333, -65.2627],
+                {"bubblingMouseEvents": true, "color": "#d95f02", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d95f02", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.634, "stroke": true, "weight": 3}
+            ).addTo(feature_group_212a10159ca4cfa13b4c456ff8d16421);
+        
+    
+        var popup_5466cb75895eaadba7e4438ed3aa5f23 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4ce29691645477832fa364b0f6992f62 = $(`<div id="html_4ce29691645477832fa364b0f6992f62" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Chuquisaca</h4>         <b>Población estimada:</b> 630<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 13.31%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 32.91%<br>         <b>Cifra negra (no denuncia):</b> 98.5%     </div>     </div>`)[0];
+                popup_5466cb75895eaadba7e4438ed3aa5f23.setContent(html_4ce29691645477832fa364b0f6992f62);
+            
+        
+
+        circle_marker_c85563b195f9e5a8978d8c1018c0d1b3.bindPopup(popup_5466cb75895eaadba7e4438ed3aa5f23)
+        ;
+
+        
+    
+    
+            circle_marker_c85563b195f9e5a8978d8c1018c0d1b3.bindTooltip(
+                `<div>
+                     Chuquisaca | Discriminación: 13.31%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6eecbeaa6e51a1d23912015f438b7b69 = L.circleMarker(
+                [-17.9833, -67.1167],
+                {"bubblingMouseEvents": true, "color": "#d95f02", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d95f02", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.689999999999998, "stroke": true, "weight": 3}
+            ).addTo(feature_group_212a10159ca4cfa13b4c456ff8d16421);
+        
+    
+        var popup_4f2ee13fdf0b48961324d0eeb105afa3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0a79353f8d3c8f828a681386fab67888 = $(`<div id="html_0a79353f8d3c8f828a681386fab67888" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Oruro</h4>         <b>Población estimada:</b> 651<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 13.35%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 45.37%<br>         <b>Cifra negra (no denuncia):</b> 99.22%     </div>     </div>`)[0];
+                popup_4f2ee13fdf0b48961324d0eeb105afa3.setContent(html_0a79353f8d3c8f828a681386fab67888);
+            
+        
+
+        circle_marker_6eecbeaa6e51a1d23912015f438b7b69.bindPopup(popup_4f2ee13fdf0b48961324d0eeb105afa3)
+        ;
+
+        
+    
+    
+            circle_marker_6eecbeaa6e51a1d23912015f438b7b69.bindTooltip(
+                `<div>
+                     Oruro | Discriminación: 13.35%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ff79019c36df60ae778a9242af50168 = L.circleMarker(
+                [-17.3895, -66.1568],
+                {"bubblingMouseEvents": true, "color": "#d95f02", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d95f02", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.844, "stroke": true, "weight": 3}
+            ).addTo(feature_group_212a10159ca4cfa13b4c456ff8d16421);
+        
+    
+        var popup_605a2d781a7a94e94525f6186181007a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1b080903c04b1a40ca3aad7ebd093180 = $(`<div id="html_1b080903c04b1a40ca3aad7ebd093180" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Cochabamba</h4>         <b>Población estimada:</b> 2,258<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 13.46%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 53.38%<br>         <b>Cifra negra (no denuncia):</b> 97.78%     </div>     </div>`)[0];
+                popup_605a2d781a7a94e94525f6186181007a.setContent(html_1b080903c04b1a40ca3aad7ebd093180);
+            
+        
+
+        circle_marker_6ff79019c36df60ae778a9242af50168.bindPopup(popup_605a2d781a7a94e94525f6186181007a)
+        ;
+
+        
+    
+    
+            circle_marker_6ff79019c36df60ae778a9242af50168.bindTooltip(
+                `<div>
+                     Cochabamba | Discriminación: 13.46%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ccf15ba38b8bdd26300860fd26ad31a = L.circleMarker(
+                [-21.5355, -64.7296],
+                {"bubblingMouseEvents": true, "color": "#d95f02", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d95f02", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.367999999999999, "stroke": true, "weight": 3}
+            ).addTo(feature_group_212a10159ca4cfa13b4c456ff8d16421);
+        
+    
+        var popup_dcf41c8d0607f8f644146822187932a6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_792a22cf17b24380b42302e21e025461 = $(`<div id="html_792a22cf17b24380b42302e21e025461" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Tarija</h4>         <b>Población estimada:</b> 601<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 8.12%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 45.26%<br>         <b>Cifra negra (no denuncia):</b> 96.63%     </div>     </div>`)[0];
+                popup_dcf41c8d0607f8f644146822187932a6.setContent(html_792a22cf17b24380b42302e21e025461);
+            
+        
+
+        circle_marker_4ccf15ba38b8bdd26300860fd26ad31a.bindPopup(popup_dcf41c8d0607f8f644146822187932a6)
+        ;
+
+        
+    
+    
+            circle_marker_4ccf15ba38b8bdd26300860fd26ad31a.bindTooltip(
+                `<div>
+                     Tarija | Discriminación: 8.12%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d0442d69c3c10c39016dc7c2bf565b7 = L.circleMarker(
+                [-16.5, -68.15],
+                {"bubblingMouseEvents": true, "color": "#d95f02", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d95f02", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.698, "stroke": true, "weight": 3}
+            ).addTo(feature_group_212a10159ca4cfa13b4c456ff8d16421);
+        
+    
+        var popup_2dc9f20f2b30601b4afbb94dc97b0f28 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9afdc84d61056278ba78067fd1626f46 = $(`<div id="html_9afdc84d61056278ba78067fd1626f46" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">La Paz</h4>         <b>Población estimada:</b> 3,168<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 24.07%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 53.95%<br>         <b>Cifra negra (no denuncia):</b> 97.52%     </div>     </div>`)[0];
+                popup_2dc9f20f2b30601b4afbb94dc97b0f28.setContent(html_9afdc84d61056278ba78067fd1626f46);
+            
+        
+
+        circle_marker_8d0442d69c3c10c39016dc7c2bf565b7.bindPopup(popup_2dc9f20f2b30601b4afbb94dc97b0f28)
+        ;
+
+        
+    
+    
+            circle_marker_8d0442d69c3c10c39016dc7c2bf565b7.bindTooltip(
+                `<div>
+                     La Paz | Discriminación: 24.07%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_16c74515cdd740643fcf4527a1f92a16 = L.circleMarker(
+                [-17.7833, -63.1821],
+                {"bubblingMouseEvents": true, "color": "#d95f02", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d95f02", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.42, "stroke": true, "weight": 3}
+            ).addTo(feature_group_212a10159ca4cfa13b4c456ff8d16421);
+        
+    
+        var popup_10e24bfa28f02e813eb1b6c0ff601fcb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2543642a2c440aeb7112a1ce899485f7 = $(`<div id="html_2543642a2c440aeb7112a1ce899485f7" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Santa Cruz</h4>         <b>Población estimada:</b> 3,503<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 10.3%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 48.28%<br>         <b>Cifra negra (no denuncia):</b> 97.89%     </div>     </div>`)[0];
+                popup_10e24bfa28f02e813eb1b6c0ff601fcb.setContent(html_2543642a2c440aeb7112a1ce899485f7);
+            
+        
+
+        circle_marker_16c74515cdd740643fcf4527a1f92a16.bindPopup(popup_10e24bfa28f02e813eb1b6c0ff601fcb)
+        ;
+
+        
+    
+    
+            circle_marker_16c74515cdd740643fcf4527a1f92a16.bindTooltip(
+                `<div>
+                     Santa Cruz | Discriminación: 10.3%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_adb80b51287c2497c6f90cfcd551015a = L.circleMarker(
+                [-14.8333, -64.9],
+                {"bubblingMouseEvents": true, "color": "#d95f02", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d95f02", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.128, "stroke": true, "weight": 3}
+            ).addTo(feature_group_212a10159ca4cfa13b4c456ff8d16421);
+        
+    
+        var popup_7e586853e220e38fbd96aef2490815fe = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a5275a85678b8a5f60a459aa204905cc = $(`<div id="html_a5275a85678b8a5f60a459aa204905cc" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Beni</h4>         <b>Población estimada:</b> 532<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 11.52%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 44.85%<br>         <b>Cifra negra (no denuncia):</b> 96.91%     </div>     </div>`)[0];
+                popup_7e586853e220e38fbd96aef2490815fe.setContent(html_a5275a85678b8a5f60a459aa204905cc);
+            
+        
+
+        circle_marker_adb80b51287c2497c6f90cfcd551015a.bindPopup(popup_7e586853e220e38fbd96aef2490815fe)
+        ;
+
+        
+    
+    
+            circle_marker_adb80b51287c2497c6f90cfcd551015a.bindTooltip(
+                `<div>
+                     Beni | Discriminación: 11.52%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_212a10159ca4cfa13b4c456ff8d16421.addTo(map_4c35de82e01f04383528317406c563b2);
+        
+    
+            var feature_group_2b0db7cb4314298699a1b5f1ebbc1b7b = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_d69f3cc0f5f797072557e9afab819999 = L.circleMarker(
+                [-19.5836, -65.7531],
+                {"bubblingMouseEvents": true, "color": "#7570b3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7570b3", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 160.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2b0db7cb4314298699a1b5f1ebbc1b7b);
+        
+    
+        var popup_6039d0d45be7d4025d74a13a801bea51 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0a69d91477357bd4410c4fbb338b87c0 = $(`<div id="html_0a69d91477357bd4410c4fbb338b87c0" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Potosí</h4>         <b>Población estimada:</b> 882<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 13.63%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 41.46%<br>         <b>Cifra negra (no denuncia):</b> 97.74%     </div>     </div>`)[0];
+                popup_6039d0d45be7d4025d74a13a801bea51.setContent(html_0a69d91477357bd4410c4fbb338b87c0);
+            
+        
+
+        circle_marker_d69f3cc0f5f797072557e9afab819999.bindPopup(popup_6039d0d45be7d4025d74a13a801bea51)
+        ;
+
+        
+    
+    
+            circle_marker_d69f3cc0f5f797072557e9afab819999.bindTooltip(
+                `<div>
+                     Potosí | Victimización: 100.0%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_822ece00fa751bbd0f2be3bb9156d57f = L.circleMarker(
+                [-11.0267, -68.7692],
+                {"bubblingMouseEvents": true, "color": "#7570b3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7570b3", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 160.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2b0db7cb4314298699a1b5f1ebbc1b7b);
+        
+    
+        var popup_3bf89d7e722723dbaa82a849d009fcfe = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7ae1d88e13f6936d3d89bd247fa09040 = $(`<div id="html_7ae1d88e13f6936d3d89bd247fa09040" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Pando</h4>         <b>Población estimada:</b> 133<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 18.31%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 45.68%<br>         <b>Cifra negra (no denuncia):</b> 91.42%     </div>     </div>`)[0];
+                popup_3bf89d7e722723dbaa82a849d009fcfe.setContent(html_7ae1d88e13f6936d3d89bd247fa09040);
+            
+        
+
+        circle_marker_822ece00fa751bbd0f2be3bb9156d57f.bindPopup(popup_3bf89d7e722723dbaa82a849d009fcfe)
+        ;
+
+        
+    
+    
+            circle_marker_822ece00fa751bbd0f2be3bb9156d57f.bindTooltip(
+                `<div>
+                     Pando | Victimización: 100.0%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0052aba577fd3dae20c08084a47e33b7 = L.circleMarker(
+                [-19.0333, -65.2627],
+                {"bubblingMouseEvents": true, "color": "#7570b3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7570b3", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 160.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2b0db7cb4314298699a1b5f1ebbc1b7b);
+        
+    
+        var popup_3ef68b17713a39f07b4391833e2a5b18 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e3b1b9dad105b6d6bed85aa220d14866 = $(`<div id="html_e3b1b9dad105b6d6bed85aa220d14866" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Chuquisaca</h4>         <b>Población estimada:</b> 630<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 13.31%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 32.91%<br>         <b>Cifra negra (no denuncia):</b> 98.5%     </div>     </div>`)[0];
+                popup_3ef68b17713a39f07b4391833e2a5b18.setContent(html_e3b1b9dad105b6d6bed85aa220d14866);
+            
+        
+
+        circle_marker_0052aba577fd3dae20c08084a47e33b7.bindPopup(popup_3ef68b17713a39f07b4391833e2a5b18)
+        ;
+
+        
+    
+    
+            circle_marker_0052aba577fd3dae20c08084a47e33b7.bindTooltip(
+                `<div>
+                     Chuquisaca | Victimización: 100.0%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0e6965f06314b69e0100d0a525559a6b = L.circleMarker(
+                [-17.9833, -67.1167],
+                {"bubblingMouseEvents": true, "color": "#7570b3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7570b3", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 160.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2b0db7cb4314298699a1b5f1ebbc1b7b);
+        
+    
+        var popup_28c08d421bcbb797871267ca5caf3615 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d21d97cee3eddbe23a28c907b949d3af = $(`<div id="html_d21d97cee3eddbe23a28c907b949d3af" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Oruro</h4>         <b>Población estimada:</b> 651<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 13.35%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 45.37%<br>         <b>Cifra negra (no denuncia):</b> 99.22%     </div>     </div>`)[0];
+                popup_28c08d421bcbb797871267ca5caf3615.setContent(html_d21d97cee3eddbe23a28c907b949d3af);
+            
+        
+
+        circle_marker_0e6965f06314b69e0100d0a525559a6b.bindPopup(popup_28c08d421bcbb797871267ca5caf3615)
+        ;
+
+        
+    
+    
+            circle_marker_0e6965f06314b69e0100d0a525559a6b.bindTooltip(
+                `<div>
+                     Oruro | Victimización: 100.0%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6669760d8183fb09904d7d264e60d648 = L.circleMarker(
+                [-17.3895, -66.1568],
+                {"bubblingMouseEvents": true, "color": "#7570b3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7570b3", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 160.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2b0db7cb4314298699a1b5f1ebbc1b7b);
+        
+    
+        var popup_f37e3b76286266ae482b3bd30daad327 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_16552057f4da4ab5dca400174f077fce = $(`<div id="html_16552057f4da4ab5dca400174f077fce" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Cochabamba</h4>         <b>Población estimada:</b> 2,258<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 13.46%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 53.38%<br>         <b>Cifra negra (no denuncia):</b> 97.78%     </div>     </div>`)[0];
+                popup_f37e3b76286266ae482b3bd30daad327.setContent(html_16552057f4da4ab5dca400174f077fce);
+            
+        
+
+        circle_marker_6669760d8183fb09904d7d264e60d648.bindPopup(popup_f37e3b76286266ae482b3bd30daad327)
+        ;
+
+        
+    
+    
+            circle_marker_6669760d8183fb09904d7d264e60d648.bindTooltip(
+                `<div>
+                     Cochabamba | Victimización: 100.0%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_af607b3c96eefc4120770a29b13bcb6f = L.circleMarker(
+                [-21.5355, -64.7296],
+                {"bubblingMouseEvents": true, "color": "#7570b3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7570b3", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 160.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2b0db7cb4314298699a1b5f1ebbc1b7b);
+        
+    
+        var popup_b5426dc28e0ea16083b547fa30f2af8f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1613a9252e0589e746089c0c0820de5f = $(`<div id="html_1613a9252e0589e746089c0c0820de5f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Tarija</h4>         <b>Población estimada:</b> 601<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 8.12%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 45.26%<br>         <b>Cifra negra (no denuncia):</b> 96.63%     </div>     </div>`)[0];
+                popup_b5426dc28e0ea16083b547fa30f2af8f.setContent(html_1613a9252e0589e746089c0c0820de5f);
+            
+        
+
+        circle_marker_af607b3c96eefc4120770a29b13bcb6f.bindPopup(popup_b5426dc28e0ea16083b547fa30f2af8f)
+        ;
+
+        
+    
+    
+            circle_marker_af607b3c96eefc4120770a29b13bcb6f.bindTooltip(
+                `<div>
+                     Tarija | Victimización: 100.0%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a63ce2e68ee2ab54a0d8e633b1696bf2 = L.circleMarker(
+                [-16.5, -68.15],
+                {"bubblingMouseEvents": true, "color": "#7570b3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7570b3", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 160.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2b0db7cb4314298699a1b5f1ebbc1b7b);
+        
+    
+        var popup_688b984f407211a0283d227afc106be2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d8e5948ffb00cc9b25c65d0ebbbbd1d3 = $(`<div id="html_d8e5948ffb00cc9b25c65d0ebbbbd1d3" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">La Paz</h4>         <b>Población estimada:</b> 3,168<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 24.07%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 53.95%<br>         <b>Cifra negra (no denuncia):</b> 97.52%     </div>     </div>`)[0];
+                popup_688b984f407211a0283d227afc106be2.setContent(html_d8e5948ffb00cc9b25c65d0ebbbbd1d3);
+            
+        
+
+        circle_marker_a63ce2e68ee2ab54a0d8e633b1696bf2.bindPopup(popup_688b984f407211a0283d227afc106be2)
+        ;
+
+        
+    
+    
+            circle_marker_a63ce2e68ee2ab54a0d8e633b1696bf2.bindTooltip(
+                `<div>
+                     La Paz | Victimización: 100.0%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0bb2c3aa4aa30a188b791a8930d2a43e = L.circleMarker(
+                [-17.7833, -63.1821],
+                {"bubblingMouseEvents": true, "color": "#7570b3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7570b3", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 160.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2b0db7cb4314298699a1b5f1ebbc1b7b);
+        
+    
+        var popup_70407d2c17952973eaa1cd21d2fc2883 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2767a7dca936c057e724c2c9cded32b1 = $(`<div id="html_2767a7dca936c057e724c2c9cded32b1" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Santa Cruz</h4>         <b>Población estimada:</b> 3,503<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 10.3%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 48.28%<br>         <b>Cifra negra (no denuncia):</b> 97.89%     </div>     </div>`)[0];
+                popup_70407d2c17952973eaa1cd21d2fc2883.setContent(html_2767a7dca936c057e724c2c9cded32b1);
+            
+        
+
+        circle_marker_0bb2c3aa4aa30a188b791a8930d2a43e.bindPopup(popup_70407d2c17952973eaa1cd21d2fc2883)
+        ;
+
+        
+    
+    
+            circle_marker_0bb2c3aa4aa30a188b791a8930d2a43e.bindTooltip(
+                `<div>
+                     Santa Cruz | Victimización: 100.0%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_93161b2f8005677ac3970c75dd1ffb17 = L.circleMarker(
+                [-14.8333, -64.9],
+                {"bubblingMouseEvents": true, "color": "#7570b3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7570b3", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 160.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2b0db7cb4314298699a1b5f1ebbc1b7b);
+        
+    
+        var popup_11ba27486747f3f815dde3b978f973af = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_060321ea6af416cdf1a626d56c97de8d = $(`<div id="html_060321ea6af416cdf1a626d56c97de8d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Beni</h4>         <b>Población estimada:</b> 532<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 11.52%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 44.85%<br>         <b>Cifra negra (no denuncia):</b> 96.91%     </div>     </div>`)[0];
+                popup_11ba27486747f3f815dde3b978f973af.setContent(html_060321ea6af416cdf1a626d56c97de8d);
+            
+        
+
+        circle_marker_93161b2f8005677ac3970c75dd1ffb17.bindPopup(popup_11ba27486747f3f815dde3b978f973af)
+        ;
+
+        
+    
+    
+            circle_marker_93161b2f8005677ac3970c75dd1ffb17.bindTooltip(
+                `<div>
+                     Beni | Victimización: 100.0%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var feature_group_9cfa451ea7700fc32e89846dde5bf4b6 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_2b54d4f7f1c7512692d40578fa389680 = L.circleMarker(
+                [-19.5836, -65.7531],
+                {"bubblingMouseEvents": true, "color": "#e7298a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e7298a", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.022, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9cfa451ea7700fc32e89846dde5bf4b6);
+        
+    
+        var popup_25ffe78634b306f2d2ba31d78f106662 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a4e0f1082e89fa898e9fa72b1ca213dc = $(`<div id="html_a4e0f1082e89fa898e9fa72b1ca213dc" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Potosí</h4>         <b>Población estimada:</b> 882<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 13.63%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 41.46%<br>         <b>Cifra negra (no denuncia):</b> 97.74%     </div>     </div>`)[0];
+                popup_25ffe78634b306f2d2ba31d78f106662.setContent(html_a4e0f1082e89fa898e9fa72b1ca213dc);
+            
+        
+
+        circle_marker_2b54d4f7f1c7512692d40578fa389680.bindPopup(popup_25ffe78634b306f2d2ba31d78f106662)
+        ;
+
+        
+    
+    
+            circle_marker_2b54d4f7f1c7512692d40578fa389680.bindTooltip(
+                `<div>
+                     Potosí | Inseguridad: 41.46%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e234b4a6efa8bb492bdf356d7d178ce1 = L.circleMarker(
+                [-11.0267, -68.7692],
+                {"bubblingMouseEvents": true, "color": "#e7298a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e7298a", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.976, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9cfa451ea7700fc32e89846dde5bf4b6);
+        
+    
+        var popup_29e87146f8b34d7f68fd4f24bd5296f3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b6b13820b6b556b37312f971be92ffbb = $(`<div id="html_b6b13820b6b556b37312f971be92ffbb" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Pando</h4>         <b>Población estimada:</b> 133<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 18.31%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 45.68%<br>         <b>Cifra negra (no denuncia):</b> 91.42%     </div>     </div>`)[0];
+                popup_29e87146f8b34d7f68fd4f24bd5296f3.setContent(html_b6b13820b6b556b37312f971be92ffbb);
+            
+        
+
+        circle_marker_e234b4a6efa8bb492bdf356d7d178ce1.bindPopup(popup_29e87146f8b34d7f68fd4f24bd5296f3)
+        ;
+
+        
+    
+    
+            circle_marker_e234b4a6efa8bb492bdf356d7d178ce1.bindTooltip(
+                `<div>
+                     Pando | Inseguridad: 45.68%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_545db14f80bd17cb46dea62073a55d35 = L.circleMarker(
+                [-19.0333, -65.2627],
+                {"bubblingMouseEvents": true, "color": "#e7298a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e7298a", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.036999999999995, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9cfa451ea7700fc32e89846dde5bf4b6);
+        
+    
+        var popup_b6eaf1b9b26b9009f06ca3e643a634a9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3f50f830b2f229ff9a47e4076315e3fc = $(`<div id="html_3f50f830b2f229ff9a47e4076315e3fc" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Chuquisaca</h4>         <b>Población estimada:</b> 630<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 13.31%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 32.91%<br>         <b>Cifra negra (no denuncia):</b> 98.5%     </div>     </div>`)[0];
+                popup_b6eaf1b9b26b9009f06ca3e643a634a9.setContent(html_3f50f830b2f229ff9a47e4076315e3fc);
+            
+        
+
+        circle_marker_545db14f80bd17cb46dea62073a55d35.bindPopup(popup_b6eaf1b9b26b9009f06ca3e643a634a9)
+        ;
+
+        
+    
+    
+            circle_marker_545db14f80bd17cb46dea62073a55d35.bindTooltip(
+                `<div>
+                     Chuquisaca | Inseguridad: 32.91%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e8b5245416dc9156626eb77b256a6be = L.circleMarker(
+                [-17.9833, -67.1167],
+                {"bubblingMouseEvents": true, "color": "#e7298a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e7298a", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.758999999999997, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9cfa451ea7700fc32e89846dde5bf4b6);
+        
+    
+        var popup_144419608d8969985ecb4e44957d9121 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_df2239bbdcca3847193cad9ad54a6be1 = $(`<div id="html_df2239bbdcca3847193cad9ad54a6be1" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Oruro</h4>         <b>Población estimada:</b> 651<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 13.35%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 45.37%<br>         <b>Cifra negra (no denuncia):</b> 99.22%     </div>     </div>`)[0];
+                popup_144419608d8969985ecb4e44957d9121.setContent(html_df2239bbdcca3847193cad9ad54a6be1);
+            
+        
+
+        circle_marker_9e8b5245416dc9156626eb77b256a6be.bindPopup(popup_144419608d8969985ecb4e44957d9121)
+        ;
+
+        
+    
+    
+            circle_marker_9e8b5245416dc9156626eb77b256a6be.bindTooltip(
+                `<div>
+                     Oruro | Inseguridad: 45.37%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b805d58c5e817c40aa3106561767594 = L.circleMarker(
+                [-17.3895, -66.1568],
+                {"bubblingMouseEvents": true, "color": "#e7298a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e7298a", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 37.366, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9cfa451ea7700fc32e89846dde5bf4b6);
+        
+    
+        var popup_49c746a3c91b1a1df758e38a2c4da3d5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_55e442599cfdf824b8cf7cb6235ff369 = $(`<div id="html_55e442599cfdf824b8cf7cb6235ff369" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Cochabamba</h4>         <b>Población estimada:</b> 2,258<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 13.46%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 53.38%<br>         <b>Cifra negra (no denuncia):</b> 97.78%     </div>     </div>`)[0];
+                popup_49c746a3c91b1a1df758e38a2c4da3d5.setContent(html_55e442599cfdf824b8cf7cb6235ff369);
+            
+        
+
+        circle_marker_6b805d58c5e817c40aa3106561767594.bindPopup(popup_49c746a3c91b1a1df758e38a2c4da3d5)
+        ;
+
+        
+    
+    
+            circle_marker_6b805d58c5e817c40aa3106561767594.bindTooltip(
+                `<div>
+                     Cochabamba | Inseguridad: 53.38%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e513c79bac214700e0923a687366cfda = L.circleMarker(
+                [-21.5355, -64.7296],
+                {"bubblingMouseEvents": true, "color": "#e7298a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e7298a", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.681999999999995, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9cfa451ea7700fc32e89846dde5bf4b6);
+        
+    
+        var popup_92553d04dea9448f409e8923e08ed567 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_efe152e7762c66e66f6f5b54bbb1f09d = $(`<div id="html_efe152e7762c66e66f6f5b54bbb1f09d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Tarija</h4>         <b>Población estimada:</b> 601<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 8.12%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 45.26%<br>         <b>Cifra negra (no denuncia):</b> 96.63%     </div>     </div>`)[0];
+                popup_92553d04dea9448f409e8923e08ed567.setContent(html_efe152e7762c66e66f6f5b54bbb1f09d);
+            
+        
+
+        circle_marker_e513c79bac214700e0923a687366cfda.bindPopup(popup_92553d04dea9448f409e8923e08ed567)
+        ;
+
+        
+    
+    
+            circle_marker_e513c79bac214700e0923a687366cfda.bindTooltip(
+                `<div>
+                     Tarija | Inseguridad: 45.26%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b638dd171ec010039fbdeed9b246d31b = L.circleMarker(
+                [-16.5, -68.15],
+                {"bubblingMouseEvents": true, "color": "#e7298a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e7298a", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 37.765, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9cfa451ea7700fc32e89846dde5bf4b6);
+        
+    
+        var popup_5d7f35d39e6ef1e850bbdfbd5ca48eea = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_886c7e581d9cfdaf849e6b8c214f0b49 = $(`<div id="html_886c7e581d9cfdaf849e6b8c214f0b49" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">La Paz</h4>         <b>Población estimada:</b> 3,168<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 24.07%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 53.95%<br>         <b>Cifra negra (no denuncia):</b> 97.52%     </div>     </div>`)[0];
+                popup_5d7f35d39e6ef1e850bbdfbd5ca48eea.setContent(html_886c7e581d9cfdaf849e6b8c214f0b49);
+            
+        
+
+        circle_marker_b638dd171ec010039fbdeed9b246d31b.bindPopup(popup_5d7f35d39e6ef1e850bbdfbd5ca48eea)
+        ;
+
+        
+    
+    
+            circle_marker_b638dd171ec010039fbdeed9b246d31b.bindTooltip(
+                `<div>
+                     La Paz | Inseguridad: 53.95%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_418995fc01536bbeb3cdba9825467a25 = L.circleMarker(
+                [-17.7833, -63.1821],
+                {"bubblingMouseEvents": true, "color": "#e7298a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e7298a", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.796, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9cfa451ea7700fc32e89846dde5bf4b6);
+        
+    
+        var popup_7d0c705e6dc934975e14dd3185b364e4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_18c5b3a11124caac1afbcd5d60038265 = $(`<div id="html_18c5b3a11124caac1afbcd5d60038265" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Santa Cruz</h4>         <b>Población estimada:</b> 3,503<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 10.3%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 48.28%<br>         <b>Cifra negra (no denuncia):</b> 97.89%     </div>     </div>`)[0];
+                popup_7d0c705e6dc934975e14dd3185b364e4.setContent(html_18c5b3a11124caac1afbcd5d60038265);
+            
+        
+
+        circle_marker_418995fc01536bbeb3cdba9825467a25.bindPopup(popup_7d0c705e6dc934975e14dd3185b364e4)
+        ;
+
+        
+    
+    
+            circle_marker_418995fc01536bbeb3cdba9825467a25.bindTooltip(
+                `<div>
+                     Santa Cruz | Inseguridad: 48.28%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0fdd264e71e74344d868f2cba33c5983 = L.circleMarker(
+                [-14.8333, -64.9],
+                {"bubblingMouseEvents": true, "color": "#e7298a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e7298a", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.395, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9cfa451ea7700fc32e89846dde5bf4b6);
+        
+    
+        var popup_9a99023921f5c0475b67115129c84986 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_545b2321f68850dcdf000a6cb0e2bd23 = $(`<div id="html_545b2321f68850dcdf000a6cb0e2bd23" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 230px;">         <h4 style="margin-bottom:5px; color:#1f4e78;">Beni</h4>         <b>Población estimada:</b> 532<br>         <hr style="margin:4px 0;">         <b>Discriminación:</b> 11.52%<br>         <b>Victimización:</b> 100.0%<br>         <b>Inseguridad percibida:</b> 44.85%<br>         <b>Cifra negra (no denuncia):</b> 96.91%     </div>     </div>`)[0];
+                popup_9a99023921f5c0475b67115129c84986.setContent(html_545b2321f68850dcdf000a6cb0e2bd23);
+            
+        
+
+        circle_marker_0fdd264e71e74344d868f2cba33c5983.bindPopup(popup_9a99023921f5c0475b67115129c84986)
+        ;
+
+        
+    
+    
+            circle_marker_0fdd264e71e74344d868f2cba33c5983.bindTooltip(
+                `<div>
+                     Beni | Inseguridad: 44.85%
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var layer_control_c3342fdf0d9dee19be6a1e9af68a93bb_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_aa79d3c63a809b907be19d09dced1c99,
+                },
+                overlays :  {
+                    "Capa 1: Percepci\u00f3n de Discriminaci\u00f3n (%)" : feature_group_212a10159ca4cfa13b4c456ff8d16421,
+                    "Capa 2: Victimizaci\u00f3n Delictiva (%)" : feature_group_2b0db7cb4314298699a1b5f1ebbc1b7b,
+                    "Capa 3: Percepci\u00f3n de Inseguridad (%)" : feature_group_9cfa451ea7700fc32e89846dde5bf4b6,
+                },
+            };
+            let layer_control_c3342fdf0d9dee19be6a1e9af68a93bb = L.control.layers(
+                layer_control_c3342fdf0d9dee19be6a1e9af68a93bb_layers.base_layers,
+                layer_control_c3342fdf0d9dee19be6a1e9af68a93bb_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_4c35de82e01f04383528317406c563b2);
+
+        
+</script>
+</html>
